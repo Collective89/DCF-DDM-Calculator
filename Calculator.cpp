@@ -9,7 +9,7 @@ Calculator::Calculator()
 //Initialise all of the variables for the DCFModel here.......
 void Calculator::initDCFModel()
 {
-	/*//THESE FUNCTIONS ARE COMMENTED OUT UNTIL THE VALUES TAKEN IN FROM BOTH THE EXCEL SPREADSHEETS AND ALSO THE SLIDERS ON THE
+	/*//THESE FUNCTIONS ARE COMMENTED OUT UNTIL THE VALUES TAKEN IN FROM API AND ALSO THE SLIDERS ON THE
 	//CALCULATOR INTERFACE CAN BE INPUT INTO THE RELEVANT FUNCTIONS AS THE SETTERS MUST HAVE VALUES PASSED INTO THEM AS PARAMETERS
 	////////////////////////////////////////////////////////////////WACC///////////////////////////////////////////////////////////
 	//Initalise the cost of equity
@@ -22,13 +22,11 @@ void Calculator::initDCFModel()
 	
 	//Initalise the cost of debt
 	//1st - initialise the tax rate - these values will be read in from an Excel
-	//spreadsheet down loaded from CapitalIQ
 	theDCF->getWACC()->getCostOfDebt()->getTheTax()->setTax();				//Some value goes here
 	theDCF->getWACC()->getCostOfDebt()->getTheTax()->setEBIT();
 	theDCF->getWACC()->getCostOfDebt()->getTheTax()->calcTaxRate(); 		//--No value goes here
 	
 	//2nd calculate the cost of debt - these values will also be read in from an Excel
-	//spreadsheet downloaded from CapitalIQ
 	theDCF->getWACC()->getCostOfDebt()->setInterest(); 						//--Some value goes here
 	theDCF->getWACC()->getCostOfDebt()->setTotalLiab();
 	theDCF->getWACC()->getCostOfDebt()->calcCostOfDebt();
@@ -42,13 +40,11 @@ void Calculator::initDCFModel()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////FCFF///////////////////////////////////////////////////////////
 	//1st - initialise the tax rate - these values will be read in from an Excel
-	//spreadsheet down loaded from CapitalIQ
 	theFCFF->getTheTax()->setTax();											//Some value goes here
 	theFCFF->getTheTax()->setEBIT();
 	theFCFF->getTheTax()->calcTaxRate(); 									//--No value goes here
 	
 	//Now initialise the net working capital class instances
-	//These values will be read in from an Excel spreadsheet downloaded from CapitalIQ
 	//Calculate the difference in change in net working capital between last year and current year
 	//First the previous year
 	theDCF->getFCFF()->getNetWorkMinus()->setCurrAssets();					//--Some value goes here
@@ -60,7 +56,6 @@ void Calculator::initDCFModel()
 	
 	//Now we intialise the net asset class instances and calculate the difference in the
 	//net assets between last year and current year.
-	//These values will be read in from an Excel spreadhseet downloaded from CapitalIQ
 	//First the previous year
 	theDCF->getFCFF()->getNetAssMinus()->setTotalFixAssets();				//--Some value goes here
 	theDCF->getFCFF()->getNetAssMinus()->setCurrentAssets();
@@ -78,7 +73,6 @@ void Calculator::initDCFModel()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////DCF Model/////////////////////////////////////////////////////////////
 	//Now we intialise the DCFModel instance
-	//This first value will be read in from an Excel spreadhseet downloaded from CapitalIQ
 	theDCF->setCurrMktCap();											//--Some value goes here
 	
 	//These next values will be read in from adjustable sliders 
@@ -91,7 +85,7 @@ void Calculator::initDCFModel()
 	theDCF->calcInitPVOfCashFlows();
 	theDCF->calcTerminalPVOfCashFlows();
 	theDCF->calcTotalPVOfFutureCashFlows();								//Final value stores in the valueOfCompany variable in the DCFModel class instance
-																		//this can be accessed by a getter and compared to the current market capitalisation - YAS!!!! */
+																		//this can be accessed by a getter and compared to the current market capitalisation*/
 }
 
 void Calculator::initDDModel()

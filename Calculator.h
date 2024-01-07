@@ -19,6 +19,7 @@ public:
 	//NOTE - the DCF model can be applied to any company whose cash flows are
 	//positive, so the DCF model can be applied to most companies. HOWEVER the DD model
 	//can only be applied to companies that pay dividends which is far less. 
+	
 	//Setters
 	void initDCFModel();											//Function to initialise the discounted cash flow model and all of the variables required for it
 	void initDDModel();												//Function to initialise the dividend discount model and all of the variables required for it

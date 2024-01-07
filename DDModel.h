@@ -32,6 +32,7 @@ public:
 private:
 	//Class variables
 	CostOfEquity* theCostOfEquity;									//Pointer to an instance of the cost of equity class
+	
 	//Numerical variables
 	float currDividend;												//The current dividend that the company pays out
 	float currentSharePrice;										//Variable to store the current share price of the company
